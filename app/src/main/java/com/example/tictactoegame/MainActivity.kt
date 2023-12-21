@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         binding.b9.setOnClickListener {
             buttonclick(binding.b9)
         }
+
+        binding.btnReset.setOnClickListener {
+            reset()
+        }
     }
 
     fun buttonclick(btn: Button) {
@@ -54,6 +58,7 @@ class MainActivity : AppCompatActivity() {
                 btn.text = "O"
             }
         }
+        win()
     }
 
     fun win() {
@@ -73,12 +78,53 @@ class MainActivity : AppCompatActivity() {
             toast("X won the Game")
         }
         if (binding.b7.text == "O" && binding.b8.text == "O" && binding.b9.text == "O") {
+            toast("O won the Game")
+        }
+        if (binding.b1.text == "X" && binding.b5.text == "X" && binding.b9.text == "X") {
             toast("X won the Game")
         }
-
+        if (binding.b1.text == "O" && binding.b5.text == "O" && binding.b9.text == "O") {
+            toast("O won the Game")
+        }
+        if (binding.b3.text == "X" && binding.b5.text == "X" && binding.b7.text == "X") {
+            toast("X won the Game")
+        }
+        if (binding.b3.text == "O" && binding.b5.text == "O" && binding.b7.text == "O") {
+            toast("O won the Game")
+        }
+        if (binding.b1.text == "X" && binding.b4.text == "X" && binding.b7.text == "X") {
+            toast("X won the Game")
+        }
+        if (binding.b1.text == "O" && binding.b4.text == "O" && binding.b7.text == "O") {
+            toast("O won the Game")
+        }
+        if (binding.b2.text == "X" && binding.b5.text == "X" && binding.b8.text == "X") {
+            toast("X won the Game")
+        }
+        if (binding.b2.text == "O" && binding.b5.text == "O" && binding.b8.text == "O") {
+            toast("O won the Game")
+        }
+        if (binding.b3.text == "X" && binding.b6.text == "X" && binding.b9.text == "X") {
+            toast("X won the Game")
+        }
+        if (binding.b3.text == "O" && binding.b6.text == "O" && binding.b9.text == "O") {
+            toast("O won the Game")
+        }
     }
 
     fun toast(msg: String) {
         Toast.makeText(this@MainActivity, msg, Toast.LENGTH_SHORT).show()
+    }
+
+    fun reset() {
+        binding.b1.text = ""
+        binding.b2.text = ""
+        binding.b3.text = ""
+        binding.b4.text = ""
+        binding.b5.text = ""
+        binding.b6.text = ""
+        binding.b7.text = ""
+        binding.b8.text = ""
+        binding.b9.text = ""
     }
 }
