@@ -62,53 +62,41 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun win() {
-        if (binding.b1.text == "X" && binding.b2.text == "X" && binding.b3.text == "X") {
+        if ((binding.b1.text == "X" && binding.b2.text == "X" && binding.b3.text == "X")
+            || (binding.b4.text == "X" && binding.b5.text == "X" && binding.b6.text == "X")
+            || (binding.b7.text == "X" && binding.b8.text == "X" && binding.b9.text == "X")
+            || (binding.b1.text == "X" && binding.b5.text == "X" && binding.b9.text == "X")
+            || (binding.b3.text == "X" && binding.b5.text == "X" && binding.b7.text == "X")
+            || (binding.b1.text == "X" && binding.b4.text == "X" && binding.b7.text == "X")
+            || (binding.b2.text == "X" && binding.b5.text == "X" && binding.b8.text == "X")
+            || (binding.b3.text == "X" && binding.b6.text == "X" && binding.b9.text == "X")
+            ) {
             toast("X won the Game")
+            disableButtons()
         }
-        if (binding.b1.text == "O" && binding.b2.text == "O" && binding.b3.text == "O") {
+        else if ((binding.b1.text == "O" && binding.b2.text == "O" && binding.b3.text == "O")
+            || (binding.b4.text == "O" && binding.b5.text == "O" && binding.b6.text == "O")
+            || (binding.b7.text == "O" && binding.b8.text == "O" && binding.b9.text == "O")
+            || (binding.b1.text == "O" && binding.b5.text == "O" && binding.b9.text == "O")
+            || (binding.b3.text == "O" && binding.b5.text == "O" && binding.b7.text == "O")
+            || (binding.b1.text == "O" && binding.b4.text == "O" && binding.b7.text == "O")
+            || (binding.b2.text == "O" && binding.b5.text == "O" && binding.b8.text == "O")
+            || (binding.b3.text == "O" && binding.b6.text == "O" && binding.b9.text == "O")
+            ) {
             toast("O won the Game")
+            disableButtons()
         }
-        if (binding.b4.text == "X" && binding.b5.text == "X" && binding.b6.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b4.text == "O" && binding.b5.text == "O" && binding.b6.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b7.text == "X" && binding.b8.text == "X" && binding.b9.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b7.text == "O" && binding.b8.text == "O" && binding.b9.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b1.text == "X" && binding.b5.text == "X" && binding.b9.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b1.text == "O" && binding.b5.text == "O" && binding.b9.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b3.text == "X" && binding.b5.text == "X" && binding.b7.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b3.text == "O" && binding.b5.text == "O" && binding.b7.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b1.text == "X" && binding.b4.text == "X" && binding.b7.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b1.text == "O" && binding.b4.text == "O" && binding.b7.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b2.text == "X" && binding.b5.text == "X" && binding.b8.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b2.text == "O" && binding.b5.text == "O" && binding.b8.text == "O") {
-            toast("O won the Game")
-        }
-        if (binding.b3.text == "X" && binding.b6.text == "X" && binding.b9.text == "X") {
-            toast("X won the Game")
-        }
-        if (binding.b3.text == "O" && binding.b6.text == "O" && binding.b9.text == "O") {
-            toast("O won the Game")
+        else if (binding.b1.text != ""
+            && binding.b2.text != ""
+            && binding.b3.text != ""
+            && binding.b4.text != ""
+            && binding.b5.text != ""
+            && binding.b6.text != ""
+            && binding.b7.text != ""
+            && binding.b8.text != ""
+            && binding.b9.text != ""
+        ) {
+            toast("Tie Game")
         }
     }
 
@@ -126,5 +114,26 @@ class MainActivity : AppCompatActivity() {
         binding.b7.text = ""
         binding.b8.text = ""
         binding.b9.text = ""
+        binding.b1.isEnabled = true
+        binding.b2.isEnabled = true
+        binding.b3.isEnabled = true
+        binding.b4.isEnabled = true
+        binding.b5.isEnabled = true
+        binding.b6.isEnabled = true
+        binding.b7.isEnabled = true
+        binding.b8.isEnabled = true
+        binding.b9.isEnabled = true
+    }
+    
+    fun disableButtons() {
+        binding.b1.isEnabled = false
+        binding.b2.isEnabled = false
+        binding.b3.isEnabled = false
+        binding.b4.isEnabled = false
+        binding.b5.isEnabled = false
+        binding.b6.isEnabled = false
+        binding.b7.isEnabled = false
+        binding.b8.isEnabled = false
+        binding.b9.isEnabled = false
     }
 }
