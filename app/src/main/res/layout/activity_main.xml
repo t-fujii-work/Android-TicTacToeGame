@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginTop="56dp"
         android:text="Tic Tac Toe Game"
         android:textColor="#037167"
         android:textSize="30dp"
@@ -18,6 +19,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:fontFamily="@font/aladin" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        tools:fontFamily="@font/aladin"
+        android:textColor="#FF5722"
+        android:textSize="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <GridLayout
         android:layout_width="wrap_content"

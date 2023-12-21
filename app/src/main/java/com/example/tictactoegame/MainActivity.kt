@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
             || (binding.b2.text == "X" && binding.b5.text == "X" && binding.b8.text == "X")
             || (binding.b3.text == "X" && binding.b6.text == "X" && binding.b9.text == "X")
             ) {
+            binding.txtResult.text = "X won the Game"
             toast("X won the Game")
             disableButtons()
         }
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity() {
             || (binding.b2.text == "O" && binding.b5.text == "O" && binding.b8.text == "O")
             || (binding.b3.text == "O" && binding.b6.text == "O" && binding.b9.text == "O")
             ) {
+            binding.txtResult.text = "O won the Game"
             toast("O won the Game")
             disableButtons()
         }
@@ -97,6 +99,7 @@ class MainActivity : AppCompatActivity() {
             && binding.b9.text != ""
         ) {
             toast("Tie Game")
+            binding.txtResult.text = "Match Draw/Tie"
         }
     }
 
